@@ -13,7 +13,7 @@ function initialize(passport, getUserByEmail, getUserById){
             } else { // password didn't matched
                 return done(null, false);
             }
-        } catch (error) {
+        } catch (err) {
             return done(err);
         }
     }
@@ -28,3 +28,4 @@ function initialize(passport, getUserByEmail, getUserById){
     });
 }
 
+module.exports = initialize;
